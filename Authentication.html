@@ -1,10 +1,18 @@
+<!--I declare that this code was written by me.
+I will not copy or allow others to copy my code.
+I understand that copyiny code is considered as plagiarism
+
+Student Name:[Gary Choa Kai Ze]
+Student ID:[22000993]
+Class[1D-E63C]
+Date/Time Last modified: [14/08/2023 9:53pm]-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>SimplyPay - Authentication Methods</title>
   <style>
     *{
-        background-color: beige;
+      background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
     }
     body {
       font-family: Arial, sans-serif;
@@ -15,7 +23,6 @@
 
     header {
       text-align: center;
-      background-color: rgb(161, 229, 161);
       color: black;
       padding:20px;
       margin:0px;
@@ -45,8 +52,7 @@
       display: inline-block;
       padding: 10px 30px;
       margin-top: 20px;
-      background-color: green;
-      color: white;
+      color: black;
       text-decoration: none;
       border-radius: 5px;
     }
@@ -54,35 +60,42 @@
 </head>
 <body>
   <header>
-    <h1><a href="MainMenu.html">SimplyPay</a></href></h1>
+    <h1><a href="index.html">SimplyPay</a></href></h1>
   </header>
-
   <div class="container">
     <h2>Authentication Methods</h2>
     
     <ul>
-      
-        <img onclick="facialRecogniton()"  src="facialrecognition.jpg" alt=""></img>
-        <img onclick="fingerprint()" src ="fingerprint.jpg" alt=""></img>
-        <img onclick="passcode()" src = "passcode.jpg" alt=""></img>   
-</ul>
-<a href="homepage.html" class="button">Confirm</a>
+        <img onclick="facialRecognition()" src="facialrecognition.jpg" alt="Facial Recognition">
+        <img onclick="fingerprint()" src="fingerprint.jpg" alt="Fingerprint">
+        <img onclick="enterPasscode()" src="passcode.jpg" alt="Passcode">
+    </ul>
+    <a href="homepage.html" class="button">Confirm</a>
   </div>
 
   <footer>
     &copy; 2023 SimplyPay. All rights reserved.
   </footer>
-
   <script>
-      function facialRecogniton() {
-            alert("Facial recongnition selected!");
-            }
-            function fingerprint(){
-             alert("Fingerprint selected!");
-            }
-            function passcode(){
-            alert("Passcode selected!");
-            }
+    function facialRecognition() {
+      alert("Facial recognition selected!");
+    }
+
+    function fingerprint() {
+      alert("Fingerprint selected!");
+    }
+
+    function enterPasscode() {
+      var enteredPasscode = prompt("Please enter a 4-digit passcode:");
+      
+      if (enteredPasscode === null) {
+        alert("No passcode entered. Authentication not processed.");
+      } else if (enteredPasscode.length !== 4 || !/^\d+$/.test(enteredPasscode)) {
+        alert("Invalid passcode. Please enter a 4-digit number.");
+      } else {
+        alert("Passcode selected: " + enteredPasscode);
+      }
+    }
   </script>
 </body>
 </html>

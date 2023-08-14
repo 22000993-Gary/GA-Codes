@@ -1,69 +1,57 @@
+<!--I declare that this code was written by me.
+I will not copy or allow others to copy my code.
+I understand that copyiny code is considered as plagiarism
+
+Student Name:[Gary Choa Kai Ze]
+Student ID:[22000993]
+Class[1D-E63C]
+Date/Time Last modified: [14/08/2023 9:53pm]-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Regenerating QR Code</title>
-    <style>
-        * {
-            background-color: beige;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .qrCodeContainer {
-            text-align: center;
-        }
-        header {
-            background-color: rgb(161, 229, 161);
-            color: black;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            z-index: 1;
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <title>Payment Scan Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column; 
+      align-items: center; 
+      background: rgb(251,103,63);
+      background: radial-gradient(circle, rgba(251,103,63,0.5697715609681373) 52%, rgba(70,252,228,1) 100%);
+    }
+
+    img {
+      max-width: 500px;
+      height: auto;
+      padding:20px;
+    }
+
+    #scan-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+    header {
+      color: black;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
     <header>
-        <h1><a href="MainMenu.html">SimplyPay</a></h1>
+        <h1><a href="index.html">SimplyPay</a></href></h1>
     </header>
-    <div id="qrCodeContainer"></div>
-
-    <script>
-        function generateQRCode() {
-            // Replace 'YOUR_PAYMENT_PAGE_URL' with the actual URL of your payment page
-            const paymentPageURL = 'payment.html';
-
-            // Clear any existing QR code
-            document.getElementById('qrCodeContainer').innerHTML = '';
-
-            // Create a new QR code instance
-            const qrCode = new QRCode(document.getElementById('qrCodeContainer'), {
-                text: paymentPageURL,
-                width: 256,
-                height: 256,
-            });
-
-            // Optionally, you can add a descriptive text below the QR code
-            const qrCodeText = document.createElement('p');
-            qrCodeText.innerText = 'Scan the QR code to make a payment';
-            document.getElementById('qrCodeContainer').appendChild(qrCodeText);
-        }
-
-        // Generate the initial QR code
-        generateQRCode();
-
-        // Regenerate QR code every 10 seconds
-        setInterval(generateQRCode, 10000);
-    </script>
+  <div>
+    <img src="qr.jpg" alt="Scan QR Code">
+    <p id="scan-text">Scan here to make payment</p>
+  </div>
 </body>
 </html>
 

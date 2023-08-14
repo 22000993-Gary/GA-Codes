@@ -1,34 +1,51 @@
+<!--I declare that this code was written by me.
+I will not copy or allow others to copy my code.
+I understand that copyiny code is considered as plagiarism
+
+Student Name:[Gary Choa Kai Ze]
+Student ID:[22000993]
+Class[1D-E63C]
+Date/Time Last modified: [14/08/2023 9:53pm]-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>SimplyPay - Home</title>
   <style>
-    *{
-        background-color: beige;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      background-image: linear-gradient(to right, #9796f0, #fbc7d4);
     }
 
     header {
-      background-color: rgb(161, 229, 161);
       color: black;
       padding: 20px;
       text-align: center;
     }
+
     .container {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 80vh;
+      margin-top: 40px;
     }
 
     .box {
-      width: 200px;
+      width: 300px;
       height: 200px;
       margin: 20px;
       display: flex;
@@ -37,6 +54,13 @@
       background-color: white;
       border-radius: 10px;
       cursor: pointer;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .box a {
@@ -46,19 +70,15 @@
     }
 
     footer {
-      background-color: black;
-      color: white;
+      color: black;
       text-align: center;
       padding: 10px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1><a href="MainMenu.html">SimplyPay</a></href></h1>
+    <h1><a href="index.html">SimplyPay</a></h1>
   </header>
 
   <div class="container">
@@ -75,3 +95,4 @@
   </footer>
 </body>
 </html>
+
