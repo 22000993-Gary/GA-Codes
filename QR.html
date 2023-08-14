@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regenerating QR Code</title>
+    <style>
+        * {
+            background-color: beige;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .qrCodeContainer {
+            text-align: center;
+        }
+        header {
+            background-color: rgb(161, 229, 161);
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="MainMenu.html">SimplyPay</a></h1>
+    </header>
+    <div id="qrCodeContainer"></div>
+
+    <script>
+        function generateQRCode() {
+            // Replace 'YOUR_PAYMENT_PAGE_URL' with the actual URL of your payment page
+            const paymentPageURL = 'payment.html';
+
+            // Clear any existing QR code
+            document.getElementById('qrCodeContainer').innerHTML = '';
+
+            // Create a new QR code instance
+            const qrCode = new QRCode(document.getElementById('qrCodeContainer'), {
+                text: paymentPageURL,
+                width: 256,
+                height: 256,
+            });
+
+            // Optionally, you can add a descriptive text below the QR code
+            const qrCodeText = document.createElement('p');
+            qrCodeText.innerText = 'Scan the QR code to make a payment';
+            document.getElementById('qrCodeContainer').appendChild(qrCodeText);
+        }
+
+        // Generate the initial QR code
+        generateQRCode();
+
+        // Regenerate QR code every 10 seconds
+        setInterval(generateQRCode, 10000);
+    </script>
+</body>
+</html>
+
+

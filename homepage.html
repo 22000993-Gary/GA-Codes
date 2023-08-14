@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimplyPay - Home</title>
+  <style>
+    *{
+        background-color: beige;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    header {
+      background-color: rgb(161, 229, 161);
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .box a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="MainMenu.html">SimplyPay</a></href></h1>
+  </header>
+
+  <div class="container">
+    <div class="box">
+      <a href="Authentication.html">Authentication Methods</a>
+    </div>
+    <div class="box">
+      <a href="QR.html">Make Payment</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 SimplyPay. All rights reserved.
+  </footer>
+</body>
+</html>

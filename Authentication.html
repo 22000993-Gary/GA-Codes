@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimplyPay - Authentication Methods</title>
+  <style>
+    *{
+        background-color: beige;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      text-align: center;
+      background-color: rgb(161, 229, 161);
+      color: black;
+      padding:20px;
+      margin:0px;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 80vh;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    img{
+     width:350px;
+     height:350px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 30px;
+      margin-top: 20px;
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="MainMenu.html">SimplyPay</a></href></h1>
+  </header>
+
+  <div class="container">
+    <h2>Authentication Methods</h2>
+    
+    <ul>
+      
+        <img onclick="facialRecogniton()"  src="facialrecognition.jpg" alt=""></img>
+        <img onclick="fingerprint()" src ="fingerprint.jpg" alt=""></img>
+        <img onclick="passcode()" src = "passcode.jpg" alt=""></img>   
+</ul>
+<a href="homepage.html" class="button">Confirm</a>
+  </div>
+
+  <footer>
+    &copy; 2023 SimplyPay. All rights reserved.
+  </footer>
+
+  <script>
+      function facialRecogniton() {
+            alert("Facial recongnition selected!");
+            }
+            function fingerprint(){
+             alert("Fingerprint selected!");
+            }
+            function passcode(){
+            alert("Passcode selected!");
+            }
+  </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimplyPay - Make Payment</title>
+  <style>
+    *{
+        background-color: beige;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(161, 229, 161);
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid white;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+    
+</head>
+<body>
+  <header>
+    <h1><a href="MainMenu.html">SimplyPay</a></href></h1>
+  </header>
+
+  <div class="container">
+    <h2>Make Payment</h2>
+    <form action="MainMenu.html">
+      <div>
+        <label for="total-amount">Total Amount:</label>
+        <input type="text" id="total-amount" name="total-amount" required>
+      </div>
+
+      <div>
+        <label for="payment-methods">Payment Methods:</label>
+        <select id="payment-methods" name="payment-methods">
+          <option value="credit-card/debit-cards">Credit Card/Debit cards</option>
+          <option value="SimplyPay-credits">SimplyPay credits</option>
+          <option value="bank-transfer">Bank Transfer</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="authorization-method">Authorization Method:</label>
+        <select id="authorization-method" name="authorization-method">
+          <option value="pin">PIN</option>
+          <option value="Fingerprint">Fingerprint</option>
+          <option value="Facial Recognition">Facial Recongnition</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Pay Now">
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2023 SimplyPay. All rights reserved.
+  </footer>
+</body>
+</html>
